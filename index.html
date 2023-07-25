@@ -1,14 +1,102 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fruit Burst</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+    <!-- Tailwind and Daisy UI cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.4.0/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google font cdn -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+    <!-- Font awesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Tailwind custom variables -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                        "primary-red": "#F85559",
+                        "primary-black": "#121212"
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Vanilla CSS utilities -->
+    <style>
+        body {
+            font-family: 'Lato', sans-serif;
+        }
+    </style>
 </head>
 
 <body>
+    <!-- Header section starts here -->
+    <header class="container mx-auto">
 
+        <!-- Navigation section starts here -->
+        <nav class="lg:bg-primary-red rounded-full lg:mt-12 lg:px-14 lg:py-3 ">
+            <div class="navbar  md:justify-between">
+                <div class="navbar-start lg:w-max">
+                    <div class="dropdown">
+                        <label tabindex="0" class="btn btn-ghost lg:hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h8m-8 6h16" />
+                            </svg>
+                        </label>
+                        <ul tabindex="0"
+                            class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Shop</a></li>
+                            <li><a href="#">All Fruits</a></li>
+                        </ul>
+                    </div>
+
+
+                    <div class="navbar-center hidden lg:flex ">
+                        <ul class="menu menu-horizontal px-1">
+                            <li><a href="#" class="font-medium text-lg text-white">Home</a></li>
+                            <li><a href="#" class="font-medium text-lg text-white">About Us</a></li>
+                            <li><a href="#" class="font-medium text-lg text-white">Shop</a></li>
+                            <li><a href="#" class="font-medium text-lg text-white">All Fruits</a></li>
+                        </ul>
+                    </div>
+
+
+                </div>
+
+                <div class="flex">
+                    <a class="w-8 md:w-[54px]" href="#"><img src="images/logo.png" alt=""></a>
+                    <span class="text-primary-black lg:text-white text-base md:text-4xl font-bold ml-1">Fruit
+                        Burst</span>
+                </div>
+
+
+                <div class="relative hidden lg:visible">
+                    <input type="text" placeholder="Search here"
+                        class="input input-bordered rounded-full lg:w-[320px] px-5" />
+                    <span class="absolute right-5">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </span>
+                </div>
+
+            </div>
+        </nav>
+        <!-- Navigation section ends here -->
+
+    </header>
+    <!-- Header section ends here -->
 </body>
 
 </html>
